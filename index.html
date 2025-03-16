@@ -6,34 +6,14 @@
     <title>Tegernsee Cricket Club</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .impressum-hidden {
-            display: none;
-            background: #f8f8f8;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .impressum-toggle {
-            cursor: pointer;
-            color: #0d3b66;
-            text-decoration: underline;
-            font-weight: bold;
+        body {
+            background-color: #ffffff;
         }
     </style>
-    <script>
-        function toggleImpressum() {
-            var impressum = document.getElementById("impressum");
-            if (impressum.style.display === "none" || impressum.style.display === "") {
-                impressum.style.display = "block";
-            } else {
-                impressum.style.display = "none";
-            }
-        }
-    </script>
 </head>
 <body>
     <header>
-        <img src="images/TCC_logo.jpg" alt="Tegernsee Cricket Club Logo" class="club-logo">
+        <img src="images/tcc_logo.jpg" alt="Tegernsee Cricket Club Logo" class="club-logo">
         <h1>Tegernsee Cricket Club</h1>
         <nav>
             <ul>
@@ -41,7 +21,7 @@
                 <li><a href="#history">Geschichte</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#training">Training</a></li>
-                <li><span class="impressum-toggle" onclick="toggleImpressum()">Impressum</span></li>
+                <li><a href="#impressum">Impressum</a></li>
             </ul>
         </nav>
     </header>
@@ -61,14 +41,15 @@
     
     <section id="vision">
         <h2>Unsere Vision</h2>
-        <p>Wir setzen uns für die Förderung des Cricketsports, Teamgeist und die Entwicklung junger Talente ein.</p>
+        <p>Wir setzen uns für die Förderung des Cricketsports, Teamgeist und die Entwicklung junger Talente ein...</p>
     </section>
     
     <section id="training">
         <h2>Trainingseinheiten</h2>
-        <p>Wir befinden uns momentan in der Saisonvorbereitung. Wir trainieren Sonntags zwischen 10:00 und 15:00 in Tegernsee. Während der Saison trainieren wir Donnerstags zwischen 18:00 und 21:00 Uhr. </section>
+        <p>Jeden <strong>Dienstag & Donnerstag</strong> um <strong>18:00 Uhr</strong> auf dem <strong>Haupt-Cricketplatz</strong>.</p>
+    </section>
     
-    <section id="impressum" class="impressum-hidden">
+    <section id="impressum">
         <h2>Impressum</h2>
         <p><strong>Angaben gemäß § 5 TMG:</strong></p>
         <p>Turnverein Tegernsee 1888 e. V.<br>
