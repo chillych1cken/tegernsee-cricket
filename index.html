@@ -1,53 +1,98 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tegernsee Cricket Club</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .impressum-hidden {
+            display: none;
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .impressum-toggle {
+            cursor: pointer;
+            color: #0d3b66;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function toggleImpressum() {
+            var impressum = document.getElementById("impressum");
+            if (impressum.style.display === "none" || impressum.style.display === "") {
+                impressum.style.display = "block";
+            } else {
+                impressum.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
-        <img src="tcc_logo.jpg" alt="Tegernsee Cricket Club Logo" class="club-logo">
+        <img src="images/tcc_logo.jpg" alt="Tegernsee Cricket Club Logo" class="club-logo">
         <h1>Tegernsee Cricket Club</h1>
         <nav>
             <ul>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#history">History</a></li>
+                <li><a href="#games">Spiele</a></li>
+                <li><a href="#history">Geschichte</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#training">Training</a></li>
+                <li><span class="impressum-toggle" onclick="toggleImpressum()">Impressum</span></li>
             </ul>
         </nav>
     </header>
     
     <section id="games">
-        <h2>Next Matches & Results</h2>
-        <iframe src="https://cricclubs.com/BayerischerCricketVerbandeV/teamResults.do?teamId=1359&clubId=40958" width="100%" height="500px" frameborder="0"></iframe>
+        <h2>Nächste Spiele & Ergebnisse</h2>
+        <iframe src="https://cricclubs.com/TegernseeCricketClub" width="100%" height="500px" frameborder="0"></iframe>
     </section>
     
     <section id="history">
-        <h2>Our History</h2>
-        <p>Founded in XXXX, our club has grown into a passionate cricket community...</p>
+        <h2>Unsere Geschichte</h2>
+        <p>Gegründet im Jahr XXXX, hat sich unser Club zu einer leidenschaftlichen Cricket-Gemeinschaft entwickelt...</p>
         <div class="gallery">
-            <img src="history1.jpg" alt="Historic Moment 1">
-            <img src="history2.jpg" alt="Historic Moment 2">
+            <img src="images/history1.jpg" alt="Historischer Moment 1">
         </div>
     </section>
     
     <section id="vision">
-        <h2>Our Vision</h2>
-        <p>We aim to promote cricket, build sportsmanship, and nurture young talents...</p>
+        <h2>Unsere Vision</h2>
+        <p>Wir setzen uns für die Förderung des Cricketsports, Teamgeist und die Entwicklung junger Talente ein...</p>
     </section>
     
     <section id="training">
-        <h2>Training Sessions</h2>
-        <p>Join us every <strong>Tuesday & Thursday</strong> at <strong>6 PM</strong> at <strong>Main Cricket Ground</strong>.</p>
+        <h2>Trainingseinheiten</h2>
+        <p>Wir befinden uns momentan in der Saisonvorbereitung. Wir trainieren Sonntags zwischen 10:00 und 15:00 in Tegernsee. Während der Saison trainieren wir Donnerstags zwischen 18:00 und 21:00 Uhr. <strong>Dienstag & Donnerstag</strong> um <strong>18:00 Uhr</strong> auf dem <strong>Haupt-Cricketplatz</strong>.</p>
+    </section>
+    
+    <section id="impressum" class="impressum-hidden">
+        <h2>Impressum</h2>
+        <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+        <p>Turnverein Tegernsee 1888 e. V.<br>
+           Pöttingerstraße 9, 83684 Tegernsee</p>
+        
+        <p><strong>Vertreten durch:</strong><br>
+        1. Vorsitzender: Rudolf Geidner</p>
+        
+        <p><strong>Kontakt:</strong><br>
+        Telefon: 08022-1381<br>
+        Telefax: 08026-93127<br>
+        E-Mail: <a href="mailto:rudolf.geidner@freenet.de">rudolf.geidner@freenet.de</a></p>
+        
+        <p><strong>Registereintrag:</strong><br>
+        Eintragung im Vereinsregister: Miesbach<br>
+        Registernummer: VR 0009</p>
+        
+        <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
+        Philipp Bächstädt</p>
     </section>
     
     <footer>
-        <p>&copy; 2025 Tegernsee Cricket Club | Follow us on <a href="#">Social Media</a></p>
+        <p>&copy; 2025 Tegernsee Cricket Club | Folgen Sie uns auf <a href="#">Social Media</a></p>
     </footer>
 </body>
 </html>
-
