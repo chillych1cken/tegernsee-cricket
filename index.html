@@ -1,78 +1,192 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tegernsee Cricket Club</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-color: #ffffff;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tegernsee Cricket Club</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .club-logo {
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    @media (min-width: 600px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .club-logo {
+        margin-bottom: 0;
+      }
+
+      h1 {
+        flex: 1;
+        text-align: center;
+        margin: 0;
+      }
+
+      nav {
+        flex: 1;
+      }
+    }
+
+    /* Image Slider Styles */
+    .slider-section {
+      max-width: 800px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="images/TCC_logo.jpg" alt="Tegernsee Cricket Club Logo" class="club-logo">
-        <h1>Tegernsee Cricket Club</h1>
-        <nav>
-            <ul>
-                <li><a href="#games">Spiele</a></li>
-                <li><a href="#history">Geschichte</a></li>
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="#training">Training</a></li>
-                <li><a href="#impressum">Impressum</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="games">
-        <h2>Nächste Spiele & Ergebnisse</h2>
-        <iframe src="https://cricclubs.com/BayerischerCricketVerbandeV" width="100%" height="500px" frameborder="0"></iframe>
-    </section>
-    
-    <section id="history">
-        <h2>Unsere Geschichte</h2>
-        <p>Gegründet im Jahr XXXX, hat sich unser Club zu einer leidenschaftlichen Cricket-Gemeinschaft entwickelt... </p>
-        <div class="gallery">
-            <img src="images/history1.jpg" alt="Historischer Moment 1">
-        </div>
-    </section>
-    
-    <section id="vision">
-        <h2>Unsere Vision</h2>
-        <p> Als Tegernseer Cricketers möchten wir die Tradition des Sports weitertragen. Tradition des Sports ist die Würdigung des Teamgeist, dem "Spirit of Cricket", deren einzige Herrin Mother Cricket über alle Spielereignisse stets waltet. Die Regeln des Spiels begründen das Unvorhersehbare an ihrer Herrinnenschaft, Übermut und falschen Stolz richtet sie gleich nach dem Infamen.</p>
-    </section>
-    
-    <section id="training">
-        <h2>Trainingseinheiten</h2>
-        <p>Zwischen Oktober und April trainieren wir sonntags von 10:00 bis 15:00 in Tegernsee. Zwischen Mai und September immer Donnerstags zwischen 18:00 und 21:00 Uhr draußen auf der Point in Tegernsee. </p>
-    </section>
-    
-    <section id="impressum">
-        <h2>Impressum</h2>
-        <p><strong>Angaben gemäß § 5 TMG:</strong></p>
-        <p>Turnverein Tegernsee 1888 e. V.<br>
-           Pöttingerstraße 9, 83684 Tegernsee</p>
-        
-        <p><strong>Vertreten durch:</strong><br>
-        1. Vorsitzender: Rudolf Geidner</p>
-        
-        <p><strong>Kontakt:</strong><br>
-        Telefon: 08022-1381<br>
-        Telefax: 08026-93127<br>
-        E-Mail: <a href="mailto:rudolf.geidner@freenet.de">rudolf.geidner@freenet.de</a></p>
-        
-        <p><strong>Registereintrag:</strong><br>
-        Eintragung im Vereinsregister: Miesbach<br>
-        Registernummer: VR 0009</p>
-        
-        <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
-        Philipp Bächstädt & Maximilian Höck</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Tegernsee Cricket Club | Für die Liebe  
-    </footer>
+  <header>
+    <img src="images/TCC_logo.jpg" alt="Tegernsee Cricket Club Logo" class="club-logo" />
+    <h1>Tegernsee Cricket Club</h1>
+    <nav>
+      <ul>
+        <li><a href="#games">Spiele</a></li>
+        <li><a href="#history">Geschichte</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#impressum">Impressum</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="games">
+    <h2>Nächste Spiele & Ergebnisse</h2>
+    <iframe src="https://cricclubs.com/BayerischerCricketVerbandeV" width="100%" height="500px" frameborder="0"></iframe>
+  </section>
+
+  <section id="history">
+    <h2>Unsere Geschichte</h2>
+    <p>Gegründet im Jahr XXXX, hat sich unser Club zu einer leidenschaftlichen Cricket-Gemeinschaft entwickelt... </p>
+    <div class="gallery">
+      <img src="images/history1.jpg" alt="Historischer Moment 1" />
+    </div>
+  </section>
+
+  <!-- 🎠 Image Slider Section -->
+  <section class="slider-section">
+    <div class="slider">
+      <img src="images/slider1.jpg" class="slide active" alt="Slide 1" />
+      <img src="images/slider2.jpg" class="slide" alt="Slide 2" />
+      <img src="images/slider3.jpg" class="slide" alt="Slide 3" />
+    </div>
+  </section>
+
+  <section id="vision">
+    <h2>Unsere Vision</h2>
+    <p>
+      Als Tegernseer Cricketers möchten wir die Tradition des Sports weitertragen. Tradition des Sports ist die Würdigung des Teamgeist, dem "Spirit of Cricket", deren einzige Herrin Mother Cricket über alle Spielereignisse stets waltet. Die Regeln des Spiels begründen das Unvorhersehbare an ihrer Herrinnenschaft, Übermut und falschen Stolz richtet sie gleich nach dem Infamen.
+    </p>
+  </section>
+
+  <section id="training">
+    <h2>Trainingseinheiten</h2>
+    <p>Zwischen Oktober und April trainieren wir sonntags von 10:00 bis 15:00 Uhr in Tegernsee. Zwischen Mai und September immer Donnerstags zwischen 18:00 und 21:00 Uhr draußen auf der Point in Tegernsee. </p>
+  </section>
+
+  <section id="impressum">
+    <h2>Impressum</h2>
+    <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+    <p>Turnverein Tegernsee 1888 e. V.<br />
+      Pöttingerstraße 9, 83684 Tegernsee</p>
+
+    <p><strong>Vertreten durch:</strong><br />
+      1. Vorsitzender: Rudolf Geidner</p>
+
+    <p><strong>Kontakt:</strong><br />
+      Telefon: 08022-1381<br />
+      Telefax: 08026-93127<br />
+      E-Mail: <a href="mailto:rudolf.geidner@freenet.de">rudolf.geidner@freenet.de</a></p>
+
+    <p><strong>Registereintrag:</strong><br />
+      Eintragung im Vereinsregister: Miesbach<br />
+      Registernummer: VR 0009</p>
+
+    <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br />
+      Philipp Bächstädt & Maximilian Höck</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tegernsee Cricket Club | Für die Liebe</p>
+  </footer>
+
+  <!-- 📜 Image Slider Script -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000);
+  </script>
 </body>
 </html>
