@@ -12,25 +12,26 @@ header {
     background-color: #0d3b66;
     color: #ffffff;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    position: relative;
 }
 
 .club-logo {
     width: 100px;
-    position: absolute;
-    left: 20px;
-    top: 10px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
 }
 
 nav ul li a {
@@ -70,41 +71,66 @@ h2 {
 footer {
     background-color: #0d3b66;
     color: #ffffff;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+    margin-top: 40px;
 }
-
 
 /* Image Slider Styles */
 .slider-section {
-  max-width: 800px;
-  margin: 40px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .slider {
-  position: relative;
-  width: 100%;
-  height: 450px; /* adjust as needed */
+    position: relative;
+    width: 100%;
+    height: 450px;
 }
 
 .slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .slide.active {
-  opacity: 1;
-  z-index: 1;
+    opacity: 1;
+    z-index: 1;
 }
 
+/* Mobile Optimierung */
+@media (max-width: 600px) {
+    section {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
 
-</style>
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 90%;
+    }
+
+    .slider {
+        height: 250px;
+    }
+}
